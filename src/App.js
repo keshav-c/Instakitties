@@ -8,35 +8,35 @@ import Cheetu from './kitties/instakitties5.jpg';
 function App() {
   return (
     <div>
-      <header>
+      <header className='header-component'>
         <h1>Instakitties</h1>
       </header>
-      <ul>
-        <li>
+      <ul className='post-list'>
+        <li className='post-component'>
           <button>
             <img src={Mummy} alt="Mummy" />
             <p>Mummy</p>
           </button>
         </li>
-        <li>
+        <li className='post-component'>
           <button>
             <img src={ChengaLaxmi} alt="Chenga and Laxmi" />
             <p>Chenga and Laxmi</p>
           </button>
         </li>
-        <li>
+        <li className='post-component'>
           <button>
             <img src={Ivy} alt="" />
             <p>Ivy</p>
           </button>
         </li>
-        <li>
+        <li className='post-component'>
           <button>
             <img src={Eeshu} alt="Eeshu" />
             <p>Eeshu</p>
           </button>
         </li>
-        <li>
+        <li className='post-component'>
           <button>
             <img src={Cheetu} alt="Cheetu" />
             <p>Cheetu</p>
