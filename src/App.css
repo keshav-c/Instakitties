@@ -81,3 +81,16 @@ body {
   font-weight: bold;
   font-size: 2em;
 }
+
+.footer-component p {
+  background: #425356;
+  text-align: right;
+  color: rgb(202, 238, 255);
+  text-transform: capitalize;
+  font-size: 1em;
+  font-style: italic;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1em;
+}

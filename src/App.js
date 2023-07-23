@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Post from './components/Post';
+import Footer from './components/Footer';
 import Mummy from './kitties/instakitties1.jpg';
 import ChengaLaxmi from './kitties/instakitties2.jpg';
 import Ivy from './kitties/instakitties3.jpg';
@@ -28,6 +29,7 @@ function App() {
           />
         ))}
       </ul>
+      <Footer />
     </div>
   );
 }
