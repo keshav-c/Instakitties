@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>Ottergram</h1>
+        <h1>Instakitties</h1>
       </header>
     </div>
   );
