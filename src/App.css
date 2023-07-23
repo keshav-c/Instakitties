@@ -9,6 +9,16 @@ body {
   text-transform: uppercase;
   font-size: 3em;
   width: 100%;
+  margin-bottom: 0;
+}
+
+.header-component p {
+  background: white;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 1em;
+  font-style: italic;
+  margin-top: 0;
 }
 
 .post-list {

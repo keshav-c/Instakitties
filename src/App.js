@@ -10,6 +10,7 @@ function App() {
     <div>
       <header className='header-component'>
         <h1>Instakitties</h1>
+        <p>All my kitties with their best foot forward!</p>
       </header>
       <ul className='post-list'>
         <li className='post-component'>
