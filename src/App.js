@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header';
+import Post from './components/Post';
 import Mummy from './kitties/instakitties1.jpg';
 import ChengaLaxmi from './kitties/instakitties2.jpg';
 import Ivy from './kitties/instakitties3.jpg';
@@ -11,36 +12,11 @@ function App() {
     <div>
       <Header />
       <ul className='post-list'>
-        <li className='post-component'>
-          <button>
-            <img src={Mummy} alt="Mummy" />
-            <p>Mummy</p>
-          </button>
-        </li>
-        <li className='post-component'>
-          <button>
-            <img src={ChengaLaxmi} alt="Chenga and Laxmi" />
-            <p>Chenga and Laxmi</p>
-          </button>
-        </li>
-        <li className='post-component'>
-          <button>
-            <img src={Ivy} alt="" />
-            <p>Ivy</p>
-          </button>
-        </li>
-        <li className='post-component'>
-          <button>
-            <img src={Eeshu} alt="Eeshu" />
-            <p>Eeshu</p>
-          </button>
-        </li>
-        <li className='post-component'>
-          <button>
-            <img src={Cheetu} alt="Cheetu" />
-            <p>Cheetu</p>
-          </button>
-        </li>
+        <Post image={Mummy} name="Mummy" />
+        <Post image={ChengaLaxmi} name="Chenga and Laxmi" />
+        <Post image={Ivy} name="Ivy" />
+        <Post image={Eeshu} name="Eeshu" />
+        <Post image={Cheetu} name="Cheetu" />
       </ul>
     </div>
   );
