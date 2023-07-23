@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/Header';
 import Mummy from './kitties/instakitties1.jpg';
 import ChengaLaxmi from './kitties/instakitties2.jpg';
 import Ivy from './kitties/instakitties3.jpg';
@@ -8,10 +9,7 @@ import Cheetu from './kitties/instakitties5.jpg';
 function App() {
   return (
     <div>
-      <header className='header-component'>
-        <h1>Instakitties</h1>
-        <p>All my kitties with their best foot forward!</p>
-      </header>
+      <Header />
       <ul className='post-list'>
         <li className='post-component'>
           <button>
