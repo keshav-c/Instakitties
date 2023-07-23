@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Post from './components/Post';
 import Footer from './components/Footer';
+import SelectedItem from './components/SelectedItem';
 import Mummy from './kitties/instakitties1.jpg';
 import ChengaLaxmi from './kitties/instakitties2.jpg';
 import Ivy from './kitties/instakitties3.jpg';
@@ -20,15 +21,18 @@ function App() {
   return (
     <div>
       <Header />
-      <ul className='post-list'>
-        {kitties.map(({ image, name }, id) => (
-          <Post
-            image={image}
-            name={name}
-            key={id}
-          />
-        ))}
-      </ul>
+      <div className='app-content'>
+        <ul className='post-list'>
+          {kitties.map(({ image, name }, id) => (
+            <Post
+              image={image}
+              name={name}
+              key={id}
+            />
+          ))}
+        </ul>
+        <SelectedItem image={kitties[0].image} name={kitties[0].name} />
+      </div>
       <Footer />
     </div>
   );
