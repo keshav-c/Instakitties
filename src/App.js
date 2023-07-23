@@ -7,16 +7,26 @@ import Ivy from './kitties/instakitties3.jpg';
 import Eeshu from './kitties/instakitties4.jpg';
 import Cheetu from './kitties/instakitties5.jpg';
 
+const kitties = [
+  { image: Mummy, name: "Mummy" },
+  { image: ChengaLaxmi, name: "Chenga and Laxmi" },
+  { image: Ivy, name: "Ivy" },
+  { image: Eeshu, name: "Eeshu" },
+  { image: Cheetu, name: "Cheetu" }
+];
+
 function App() {
   return (
     <div>
       <Header />
       <ul className='post-list'>
-        <Post image={Mummy} name="Mummy" />
-        <Post image={ChengaLaxmi} name="Chenga and Laxmi" />
-        <Post image={Ivy} name="Ivy" />
-        <Post image={Eeshu} name="Eeshu" />
-        <Post image={Cheetu} name="Cheetu" />
+        {kitties.map(({ image, name }, id) => (
+          <Post
+            image={image}
+            name={name}
+            key={id}
+          />
+        ))}
       </ul>
     </div>
   );
