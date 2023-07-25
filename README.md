@@ -1,6 +1,8 @@
 # Instakitties
 This is a starter react app. Use the code as you wish, with no warranties, but the images in the assets are personal. Use them according to the CC BY-SA license.
 
+See live on Cloudflare Pages: [https://instakitties.pages.dev/](https://instakitties.pages.dev/)
+
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 This work is licensed under a
