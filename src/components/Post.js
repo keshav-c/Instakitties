@@ -1,8 +1,4 @@
-function Post({ image, name }) {
-  const handleClick = (catName) => {
-    console.log('You clicked ' + catName);
-  };
-
+function Post({ image, name, setSelectedPostName }) {
   const handleMouseEnter = (catName) => {
     console.log(`Hello, ${catName}`);
   };
@@ -14,7 +10,7 @@ function Post({ image, name }) {
   return (
     <li className="post-component">
       <button
-        onClick={() => handleClick(name)}
+        onClick={() => setSelectedPostName(name)}
         onMouseEnter={() => handleMouseEnter(name)}
         onMouseLeave={() => handleMouseLeave(name)}
       >

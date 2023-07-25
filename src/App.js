@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Post from './components/Post';
@@ -18,6 +19,9 @@ const kitties = [
 ];
 
 function App() {
+  const [selectedPostName, setSelectedPostName] = useState('Mummy');
+  const selectedPost = kitties.find(({ name }) => name === selectedPostName);
+
   return (
     <div>
       <Header />
@@ -28,10 +32,11 @@ function App() {
               image={image}
               name={name}
               key={id}
+              setSelectedPostName={setSelectedPostName}
             />
           ))}
         </ul>
-        <SelectedItem image={kitties[0].image} name={kitties[0].name} />
+        <SelectedItem image={selectedPost.image} name={selectedPost.name} />
       </div>
       <Footer />
     </div>
