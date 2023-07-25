@@ -1,8 +1,10 @@
 function ShuffleButton({ shuffle }) {
   return (
-    <button className="shuffle-button" onClick={shuffle}>
-      Shuffle
-    </button>
+    <li className="post-component">
+      <button className="shuffle-button" onClick={shuffle}>
+        Shuffle
+      </button>
+    </li>
   );
 }
 

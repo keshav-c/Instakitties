@@ -9,7 +9,6 @@ import Ivy from './kitties/instakitties3.jpg';
 import Eeshu from './kitties/instakitties4.jpg';
 import Cheetu from './kitties/instakitties5.jpg';
 import PostList from './components/PostList';
-import ShuffleButton from './components/ShuffleButton';
 
 const kitties = [
   { image: Mummy, name: "Mummy" },
@@ -33,11 +32,8 @@ function App() {
     <div>
       <Header />
       <div className='app-content'>
-        <PostList posts={posts} setSelectedPostName={setSelectedPostName} />
-        <div className='selected-area'>
-          <SelectedItem image={selectedPost.image} name={selectedPost.name} />
-          <ShuffleButton shuffle={shuffle} />
-        </div>
+        <PostList posts={posts} setSelectedPostName={setSelectedPostName} shuffle={shuffle} />
+        <SelectedItem image={selectedPost.image} name={selectedPost.name} />
       </div>
       <Footer />
     </div>
