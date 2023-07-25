@@ -30,6 +30,12 @@ body {
   align-items: center;
 }
 
+.selected-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .post-component {
   display: flex;
   flex-direction: column;

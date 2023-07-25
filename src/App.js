@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Post from './components/Post';
 import Footer from './components/Footer';
 import SelectedItem from './components/SelectedItem';
 import Mummy from './kitties/instakitties1.jpg';
@@ -9,6 +8,8 @@ import ChengaLaxmi from './kitties/instakitties2.jpg';
 import Ivy from './kitties/instakitties3.jpg';
 import Eeshu from './kitties/instakitties4.jpg';
 import Cheetu from './kitties/instakitties5.jpg';
+import PostList from './components/PostList';
+import ShuffleButton from './components/ShuffleButton';
 
 const kitties = [
   { image: Mummy, name: "Mummy" },
@@ -22,21 +23,21 @@ function App() {
   const [selectedPostName, setSelectedPostName] = useState('Mummy');
   const selectedPost = kitties.find(({ name }) => name === selectedPostName);
 
+  const [posts, setPosts] = useState(kitties);
+  const shuffle = () => {
+    const [firstPost, ...restOfPosts] = posts;
+    setPosts([...restOfPosts, firstPost]);
+  };
+
   return (
     <div>
       <Header />
       <div className='app-content'>
-        <ul className='post-list'>
-          {kitties.map(({ image, name }, id) => (
-            <Post
-              image={image}
-              name={name}
-              key={id}
-              setSelectedPostName={setSelectedPostName}
-            />
-          ))}
-        </ul>
-        <SelectedItem image={selectedPost.image} name={selectedPost.name} />
+        <PostList posts={posts} setSelectedPostName={setSelectedPostName} />
+        <div className='selected-area'>
+          <SelectedItem image={selectedPost.image} name={selectedPost.name} />
+          <ShuffleButton shuffle={shuffle} />
+        </div>
       </div>
       <Footer />
     </div>
